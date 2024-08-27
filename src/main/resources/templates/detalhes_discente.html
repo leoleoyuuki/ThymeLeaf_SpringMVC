@@ -1,0 +1,57 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+	<title>Detalhes do Discente</title>
+</head>
+
+<body>
+
+	<table border="1px">
+
+		<tr>
+
+			<td>Nome do Discente:</td>
+			<td th:text="${discente.pessoa.nome}">x</td>
+		</tr>
+		<tr>
+
+			<td>CPF do Discente: </td>
+			<td th:text="${discente.pessoa.cpf}"> cpf</td>
+		</tr>
+		<tr>
+
+			<td>RM: </td>
+			<td th:text="${discente.rm}">rm</td>
+		</tr>
+		<tr>
+
+			<td> Idade: </td>
+			<td th:text="${discente.pessoa.idade}">idade</td>
+		</tr>
+		<tr>
+
+			<td>Status do Discente: </td>
+			<td th:text="${discente.status}">status</td>
+		</tr>
+		<tr>
+
+			<td>Pais Origem: </td>
+			<td th:text="${discente.pessoa.pais_origem}">pais_origem</td>
+		</tr>
+
+
+
+	</table>
+
+
+</body>
+
+</html>
