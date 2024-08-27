@@ -206,4 +206,15 @@ public class TesteController {
 	}
 	
 
+	@GetMapping("/remove_discente/{id}")
+	public String remover(@PathVariable Long id){
+		Optional<Discente> op = rep.findById(id);
+		if(op.isPresent()){
+			rep.deleteById(id);
+			return "redirect:/index1";
+		}else{
+			return "redirect:/index1";
+		}
+	}
+
 }
